@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>官方在线商城-Smartisan</title>
+
+  <!-- Bootstrap -->
+    <link href="./public/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./public/js/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./public/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./public/css/register.css">
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="navbar-header logo">
+        <img src="./public/img/smartisan_4ada7fecea.png" alt="">
+        <p>使用Smartisan ID登录官网</p>
+        <div class="col-md-10 col-md-offset-1">
+        <form action="" method="post">
+          <div>
+            <label>用户名</label>
+            <input type="text" name="username" readme="请输入6到18位用户名" class="form-control" id="exampleInputPassword1" placeholder="Password"><span></span>
+          </div>
+          <div>
+            <label>密码</label>
+            <input type="password" name="password" readme="请输入6到18位密码" class="form-control" id="exampleInputPassword1" placeholder="Password"><span></span>
+          </div>
+          <div>
+            <label>确认密码</label>
+            <input type="password" name="confirmpassword" readme="" class="form-control" id="exampleInputPassword1" placeholder="Password"><span></span>
+          </div>
+          <div>
+            <label>邮箱</label>
+            <input name="email" type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email" readme="请输入正确的邮箱"><span></span>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-success">注册</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+  <script type="text/javascript">
+
+  //声明全局变量
+  var NameOk = false;
+  var PassOk = false;
+  var EmailOk = false;
+
+  //获取焦点事件 focus
+  $('input').focus(function(){
+    //获取焦点时,给予提示信息
+    var at = $(this).attr('readme');
+    $(this).next('span').html(at).css('color','blue');
+    $(this).css('border','1px solid blue');
+  })
+
+  //绑定丧失焦点事件 blur
+  $('input[name=username]').blur(function(){
+    //获取用户的输入信息
+    var v = $(this).val();
+    var reg = /^\w{6,18}$/;
+    if(reg.test(v)){
+      $(this).next('span').html('√').css('color','green');
+      $(this).css('border','1px solid green');
+      //修改全局变量
+      NameOk = true;
+    }else{
+      $(this).next('span').html('用户名格式不正确').css('color','red');
+      $(this).css('border','1px solid red');
+      //修改全局变量
+      NameOk = false;
+    }
+  })
+
+  //绑定丧失焦点事件 blur
+  $('input[name=password]').blur(function(){
+    //获取用户的输入信息
+    var v = $(this).val();
+    var reg = /^\w{6,18}$/;
+    if(reg.test(v)){
+      $(this).next('span').html('√').css('color','green');
+      $(this).css('border','1px solid green');
+      //修改全局变量
+      PassOk = true;
+    }else{
+      $(this).next('span').html('密码格式不正确').css('color','red');
+      $(this).css('border','1px solid red');
+        //修改全局变量
+      PassOk = false;
+    }
+  })
+
+  $('input[name=confirmpassword]').blur(function(){
+    //获取用户的输入信息
+    var v = $(this).val();
+    var c =$('input[name=password]').val();
+   
+
+    if(v==c){
+      $(this).next('span').html('√').css('color','green');
+      $(this).css('border','1px solid green');
+      //修改全局变量
+      PassOk = true;
+    }else{
+      $(this).next('span').html('前后密码不一致，请重新输入').css('color','red');
+      $(this).css('border','1px solid red');
+        //修改全局变量
+      PassOk = false;
+    }
+  })
+    //绑定丧失焦点事件 blur
+  $('input[name=email]').blur(function(){
+    //获取用户的输入信息
+    var v = $(this).val();
+    var reg = /^\w+@\w+\.(com|cn|org|net)$/;
+    if(reg.test(v)){
+      $(this).next('span').html('√').css('color','green');
+      $(this).css('border','1px solid green');
+      //修改全局变量
+      EmailOk = true;
+    }else{
+      $(this).next('span').html('邮箱格式不正确').css('color','red');
+      $(this).css('border','1px solid red');
+      //修改全局变量
+      EmailOk = false;
+    }
+  })
+
+  //表单提交事件 submit
+  $('form').submit(function(){
+    //触发input 丧失焦点事件
+    $('input').trigger('blur');
+
+    //判断如果都正确
+    if(NameOk && PassOk && EmailOk){
+      return true;
+    }
+    //阻止默认行为
+    return false;
+  })
+  </script>
+</body>

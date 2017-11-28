@@ -1,0 +1,91 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+/*整体背景色*/
+body{
+  background-color: #FFFFFF;
+}
+
+/*导航*/
+.nav-dh{
+  height:101px;
+  background: #010101;
+  border-bottom-color:#8E8E8E;
+}
+.logo{
+  margin-top:15px;
+  padding-left: 10px;
+}
+.logoimg{
+  overflow: hidden;
+}
+.logoimg img{
+  position: relative;
+  top: -5px;
+}
+.dh-list{
+  margin-top:25px;position: relative;z-index: 10!important;
+}
+.dh-list .list{
+  background: #010101;
+}
+.dh-list .list li{
+  margin-right: 20px;
+}
+@media(max-width: 414px){
+   #nv{
+    display: none;
+   }
+}
+
+/*购买界面*/
+.shopping-b{
+  border: 0;
+}
+.shopping-x .pzxz{
+  margin-left: 10px;
+}
+.shopping-x .pz{
+  float: left;
+  list-style: none;
+  border: 1px solid #E5E5E5;
+  width: 245px
+}
+.shopping-x h4,h5{
+  text-align: center;
+}
+.shopping-x span{
+  font-size: 16px;
+  color: #666666;
+  padding: 10px;
+}
+.shopping-x .pzxz button{
+  background: #E3DAD1;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/*产品信息*/
+.cpxx{
+  padding-left: 30px;
+  line-height: 60px;
+  font-size: 40px;
+  font-family: "华文行楷";
+  background: #FAFAFA;
+}
+.column{
+  margin: 0;
+  padding: 0;
+}
+.cp-title .column .cp-img{
+    border: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*网页结尾*/
+.footer .f-end .p1{
+  font-size: 40px;
+}

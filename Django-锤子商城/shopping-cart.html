@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>官方在线商城-Smartisan</title>
+
+  <!-- Bootstrap -->
+    <link href="./public/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./public/js/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./public/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./public/css/shopping.css">
+    
+</head>
+<body>    
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-inverse nav-dh">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header logo">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand logoimg" href="#" title="锤子科技官网"><img src="./public/img/global-logo.png" class="img-responsive" alt="Responsive image" width="50px"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse dh-list" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav list">
+                  <li><a href="#">在线商城</a></li>
+                  <li><a href="#">坚果Pro</a></li>
+                  <li><a href="#">Smartisan M1 / M1L</a></li>
+                  <li><a href="#">Smartisan OS</a></li>
+                  <li><a href="#">欢喜云</a></li>
+                  <li><a href="#">应用下载</a></li>
+                  <li><a href="#">官方论坛</a></li>
+              </ul>
+        
+              <ul class="nav navbar-nav navbar-right" style="padding-right:38px;background: #010101;">
+                  <li style="margin-top:15px;margin-right:34px;">|</li>
+                  <li><a href="./register.html"><span class="glyphicon glyphicon-user"></span></a></li>
+                  <li><a href="#" class="gouwu"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge">0</span></a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>  
+
+  <!-- 标签页 -->
+  <nav class="navbar navbar-default " role="navigation" id="nv">
+      <div class="container">
+          <ul class="nav navbar-nav">
+              <li><a href="./index-2.html">首页</a></li>
+              <li><a href="#">手机</a></li>
+              <li><a href="./index-2.html">“足迹系列”手感膜</a></li>
+              <li><a href="./index-2.html">官方配件</a></li>
+              <li><a href="./index-2.html">周边商品</a></li>
+              <li><a href="./index-2.html">第三方配件</a></li>
+              <li><a href="./all.html">全部商品</a></li>
+              <li><a href="./index-2.html">服务</a></li>
+          </ul>
+          <div>
+              <form action="" class="navbar-form navbar-right" role="search">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">搜索</button>
+              </form>
+          </div>
+      </div>
+  </nav>
+  <!-- 绑定文档滚动事件-当文档向下滚动50px时，标签页固定在顶部 -->
+  <script type="text/javascript">
+     $(window).scroll(function(event) {
+         var st = $(window).scrollTop();
+         if(st>120){
+             $('#nv').addClass('navbar-fixed-top');
+         }else{
+             $('#nv').removeClass('navbar-fixed-top');
+         }
+     });
+  </script>
+
+  <div class="container-fluid">
+    <!-- 购买界面 -->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1" style="margin-top:50px;">
+        <!-- 手机图片 -->
+        <div class="col-md-6">
+          <div class="thumbnail shopping-b">
+              <img src="./public/img/shopping-1.png" alt="">
+          </div>
+        </div>
+        <!-- 购买选项 -->
+        <div class="col-md-6">
+          <div class="shopping-x">
+            <br>
+            <h2>坚果Pro</h2>
+            <p>超低功耗，超长续航，超级双摄</p>
+            <hr>
+            <!-- 配置选择 -->
+            <div class="row pzxz">
+                <div>
+                  <span>配置选择：</span>
+                </div>
+                
+                <div class="pz">
+                  <h4>128GB</h4>
+                  <h5>前置 1600 万像素 + 骁龙™ 626</h5>
+                </div>
+                <div class="pz">
+                  <h4>64GB</h4>
+                  <h5>前置 1600 万像素 + 骁龙™ 626</h5>
+                </div>
+                <div class="pz">
+                  <h4>32GB</h4>
+                  <h5>前置 800 万像素 + 骁龙™ 625</h5>
+                </div> 
+            </div>
+            <hr>
+            <!-- 外观颜色选择 -->
+            <div class="row pzxz">
+              <div>
+                <span>外观颜色：</span>
+              </div>
+              <br>
+              <input type="radio" name="wgys" value="0"/><label>碳黑色</label>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="wgys" value="1"/><label>酒红色</label>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="wgys" value="2"/><label>细红线特别版</label>&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="wgys" value="3"/><label>浅金色</label>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="wgys" value="4"/><label>巧克力色</label>
+            </div>
+            <hr>
+            <div class="row pzxz">
+              <ul class="nav navbar-nav navbar">
+                <button><a href="#">立即购买</a></button> 
+                <button><a href="#">加入购物车</a></button> 
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 产品信息 -->
+    <div class="row cp-title">
+        <div class="col-md-12">
+            <div class="thumbnail" style="margin:0;">
+                <h5 class="cpxx">产品信息</h5>
+            </div>
+            <div class="col-md-12 column">
+                <div class="thumbnail cp-img">
+                    <img src="./public/img/cpu-bg.4d1ac1676b608ebfe3417e9413892afa.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-12 column">
+                <div class="thumbnail cp-img">
+                    <img src="./public/img/camera-bg.8897753f00099498e49e1ae7a354e034.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-12 column">
+                <div class="thumbnail cp-img">
+                    <img src="./public/img/charge-bg0.9e783e275e764a5e659cde802f92b734.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-12 column">
+                <div class="thumbnail cp-img">
+                    <img src="./public/img/back-charge.e4cb80e995dddac0f966cd86f0537669.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+  </div>
+
+  <!-- 网页结尾 -->
+  <footer class="footer ">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+            <div class="row about">
+              <div class="col-xs-3">
+                <h4>关于</h4>
+                <ul class="list-unstyled">
+                  <li><a href="/about/">关于我们</a></li>
+                  <li><a href="/ad/">广告合作</a></li>
+                  <li><a href="/links/">友情链接</a></li>
+                  <li><a href="/hr/">招聘</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-3">
+                <h4>联系方式</h4>
+                <ul class="list-unstyled">
+                  <li><a href="http://weibo.com/bootcss" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a></li>
+                  <li><a href="mailto:admin@bootcss.com">电子邮件</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-3">
+                <h4>旗下网站</h4>
+                <ul class="list-unstyled">
+                  <li><a href="http://www.golaravel.com/" target="_blank">Laravel中文网</a></li>
+                  <li><a href="http://www.ghostchina.com/" target="_blank">Ghost中国</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-3">
+                <h4>赞助商</h4>
+                <ul class="list-unstyled">
+                  <li><a href="https://www.upyun.com" target="_blank">又拍云</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-6 f-end">
+            <p class="p1">400-619-0909</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row footer-bottom">
+          <ul class="list-inline text-center">
+            <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a></li><li>京公网安备11010802014853</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
